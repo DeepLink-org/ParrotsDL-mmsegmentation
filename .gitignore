@@ -116,3 +116,7 @@ mmseg/.mim
 
 # Pytorch
 *.pth
+
+# user
+algolib_gen/
+workdir/

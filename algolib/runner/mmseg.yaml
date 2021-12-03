@@ -1,0 +1,32 @@
+global_configs:
+    reader: MemcachedReader
+    maxstep: None
+    benchmark: 50,150
+    seed: None
+    pavi: None
+
+env_version:
+     pat : pat0.15.0rc0
+     pyt : pt1.5v3
+
+global_model_strategy:
+  dummydataset: None
+  dummydataloader: Parrots
+
+models:
+  - fcn_r101-d8_512x512_160k_ade20k
+  - pspnet_r101-d8_512x512_160k_ade20k
+  - deeplabv3_r101-d8_512x512_160k_ade20k
+  - deeplabv3plus_r101-d8_512x512_160k_ade20k
+  - apcnet_r101-d8_512x512_160k_ade20k
+  - fcn_hr18_512x512_160k_ade20k
+  - fcn_hr18s_512x512_160k_ade20k
+  - fcn_hr48_512x512_160k_ade20k
+  - ocrnet_hr18_512x512_160k_ade20k
+  - ocrnet_hr18s_512x512_160k_ade20k
+  - ocrnet_hr48_512x512_160k_ade20k
+  - isanet_r101-d8_512x512_160k_ade20k
+  - dmnet_r101-d8_512x512_160k_ade20k
+  # - upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K
+  # - upernet_swin_small_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K
+  # - upernet_swin_base_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K
