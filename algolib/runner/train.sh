@@ -47,12 +47,11 @@ export FRAME_NAME=mmseg    #customize for each frame
 export MODEL_NAME=$3
  
 # mmcv path
-CONDA_ROOT=/mnt/cache/share/platform/env/miniconda3.7
+version_p=$(python -c 'import sys; print(sys.version_info[:])')
+CONDA_ROOT=/mnt/cache/share/platform/env/miniconda3.${version_p:4:1}
 MMCV_PATH=${CONDA_ROOT}/envs/${CONDA_DEFAULT_ENV}/mmcvs
 mmcv_version=1.3.15
 export PYTHONPATH=${MMCV_PATH}/${mmcv_version}:$PYTHONPATH
-#export PYTHONPATH=/mnt/lustre/sunxiaoye/Code/mmcv/1.3.15:$PYTHONPATH
-#export PYTHONPATH=/mnt/lustre/sunxiaoye/Code/mmcv/pt1.3.15:$PYTHONPATH
 export MMCV_HOME=/mnt/lustre/share_data/parrots_algolib/datasets/pretrain/mmcv
 
 # init_path
@@ -123,7 +122,7 @@ set -x
 file_model=${FULL_MODEL##*/}
 folder_model=${FULL_MODEL%/*}
 
-srun -p $1 -n$2 -w SH-IDC1-10-198-4-155\
+srun -p $1 -n$2\
         --gres gpu:$g \
         --ntasks-per-node $g \
         --job-name=${FRAME_NAME}_${MODEL_NAME} ${SRUN_ARGS}\
