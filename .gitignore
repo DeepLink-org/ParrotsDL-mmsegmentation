@@ -120,3 +120,4 @@ mmseg/.mim
 # user
 algolib_gen/
 workdir/
+algolib/configs
