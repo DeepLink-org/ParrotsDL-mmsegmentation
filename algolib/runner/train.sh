@@ -111,6 +111,16 @@ case $MODEL_NAME in
     "dmnet_r101-d8_512x512_160k_ade20k")
         FULL_MODEL="dmnet/dmnet_r101-d8_512x512_160k_ade20k"
         ;;
+    # 注：以下三个模型存在相同的问题，详见：https://jira.sensetime.com/browse/PARROTSXQ-7694?filter=-2
+    # "upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K")
+    #     FULL_MODEL="swin/upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K"
+    #     ;;
+    # "upernet_swin_small_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K")
+    #     FULL_MODEL="swin/upernet_swin_small_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K"
+    #     ;;
+    # "upernet_swin_base_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K")
+    #     FULL_MODEL="swin/upernet_swin_base_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K"
+    #     ;;
     *)
        echo "invalid $MODEL_NAME"
        exit 1
