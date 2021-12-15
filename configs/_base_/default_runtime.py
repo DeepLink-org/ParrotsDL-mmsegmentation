@@ -6,7 +6,7 @@ log_config = dict(
         # dict(type='TensorboardLoggerHook')
     ])
 # yapf:enable
-dist_params = dict(backend='nccl', port=29502)
+dist_params = dict(backend='nccl')
 log_level = 'INFO'
 load_from = None
 resume_from = None
