@@ -1,11 +1,19 @@
 # dataset settings
+file_client_args = dict(
+    backend='petrel',
+    path_mapping=dict({
+        '/mnt/lustre/share_data/PAT/datasets/mmseg/ade/ADEChallengeData2016/':
+'openmmlab:s3://openmmlab/datasets/segmentation/ade/ADEChallengeData2016/',
+    }))
+# file_client_args = dict(backend='disk')
+
 dataset_type = 'ADE20KDataset'
 data_root = '/mnt/lustre/share_data/PAT/datasets/mmseg/ade/ADEChallengeData2016'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 crop_size = (512, 512)
 train_pipeline = [
-    dict(type='LoadImageFromFile'),
+    dict(type='LoadImageFromFile', file_client_args=file_client_args),
     dict(type='LoadAnnotations', reduce_zero_label=True),
     dict(type='Resize', img_scale=(2048, 512), ratio_range=(0.5, 2.0)),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
@@ -17,7 +25,7 @@ train_pipeline = [
     dict(type='Collect', keys=['img', 'gt_semantic_seg']),
 ]
 test_pipeline = [
-    dict(type='LoadImageFromFile'),
+    dict(type='LoadImageFromFile', file_client_args=file_client_args),
     dict(
         type='MultiScaleFlipAug',
         img_scale=(2048, 512),
