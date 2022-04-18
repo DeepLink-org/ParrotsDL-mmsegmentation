@@ -1,0 +1,41 @@
+{
+    "fcn_hr18_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/fcn_hr18_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "dmnet_r101-d8_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/dmnet_r101-d8_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "ocrnet_hr18s_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/ocrnet_hr18s_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "fcn_hr48_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/fcn_hr48_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "ocrnet_hr48_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/ocrnet_hr48_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "ocrnet_hr18_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/ocrnet_hr18_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "isanet_r101-d8_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/isanet_r101-d8_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "fcn_r101-d8_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/fcn_r101-d8_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "pspnet_r101-d8_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/pspnet_r101-d8_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "deeplabv3_r101-d8_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/deeplabv3_r101-d8_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "apcnet_r101-d8_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/apcnet_r101-d8_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "fcn_hr18s_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/fcn_hr18s_512x512_160k_ade20k/iter_160000.pth"
+    },
+    "deeplabv3plus_r101-d8_512x512_160k_ade20k": {
+        "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/deeplabv3plus_r101-d8_512x512_160k_ade20k/iter_160000.pth"
+    }
+}
