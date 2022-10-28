@@ -136,8 +136,33 @@ def build_dataloader(dataset,
         worker_init_fn, num_workers=num_workers, rank=rank,
         seed=seed) if seed is not None else None
 
-    if digit_version(torch.__version__) >= digit_version('1.8.0'):
-        data_loader = DataLoader(
+    # if digit_version(torch.__version__) >= digit_version('1.8.0'):
+        # data_loader = DataLoader(
+            # dataset,
+            # batch_size=batch_size,
+            # sampler=sampler,
+            # num_workers=num_workers,
+            # collate_fn=partial(collate, samples_per_gpu=samples_per_gpu),
+            # pin_memory=pin_memory,
+            # shuffle=shuffle,
+            # worker_init_fn=init_fn,
+            # drop_last=drop_last,
+            # persistent_workers=persistent_workers,
+            # **kwargs)
+    # else:
+        # data_loader = DataLoader(
+            # dataset,
+            # batch_size=batch_size,
+            # sampler=sampler,
+            # num_workers=num_workers,
+            # collate_fn=partial(collate, samples_per_gpu=samples_per_gpu),
+            # pin_memory=pin_memory,
+            # shuffle=shuffle,
+            # worker_init_fn=init_fn,
+            # drop_last=drop_last,
+            # **kwargs)
+
+    data_loader = DataLoader(
             dataset,
             batch_size=batch_size,
             sampler=sampler,
@@ -148,18 +173,6 @@ def build_dataloader(dataset,
             worker_init_fn=init_fn,
             drop_last=drop_last,
             persistent_workers=persistent_workers,
-            **kwargs)
-    else:
-        data_loader = DataLoader(
-            dataset,
-            batch_size=batch_size,
-            sampler=sampler,
-            num_workers=num_workers,
-            collate_fn=partial(collate, samples_per_gpu=samples_per_gpu),
-            pin_memory=pin_memory,
-            shuffle=shuffle,
-            worker_init_fn=init_fn,
-            drop_last=drop_last,
             **kwargs)
 
     return data_loader
