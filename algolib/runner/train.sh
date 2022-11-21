@@ -91,6 +91,18 @@ case $MODEL_NAME in
     "dmnet_r101-d8_512x512_160k_ade20k")
         FULL_MODEL="dmnet/dmnet_r101-d8_512x512_160k_ade20k"
         ;;
+    "deeplabv3_r50-d8_512x1024_40k_cityscapes")
+        FULL_MODEL="deeplabv3/deeplabv3_r50-d8_512x1024_40k_cityscapes"
+        ;;
+    "fcn_r50-d8_512x1024_40k_cityscapes")
+        FULL_MODEL="fcn/fcn_r50-d8_512x1024_40k_cityscapes"
+        ;;
+    "deeplabv3plus_r50-d8_512x1024_40k_cityscapes")
+        FULL_MODEL="deeplabv3plus/deeplabv3plus_r50-d8_512x1024_40k_cityscapes"
+        ;;
+    "deeplabv3_unet_s5-d16_64x64_40k_drive")
+        FULL_MODEL="unet/deeplabv3_unet_s5-d16_64x64_40k_drive"
+        ;;
     # 注：以下三个模型存在相同的问题，详见：https://jira.sensetime.com/browse/PARROTSXQ-7694?filter=-2
     # "upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K")
     #     FULL_MODEL="swin/upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K"
@@ -114,7 +126,7 @@ folder_model=${FULL_MODEL%/*}
 
 # 8. run model
 srun -p $1 -n$2\
-        --gres gpu:$g \
+        --gres mlu:$g \
         --ntasks-per-node $g \
         --job-name=${FRAME_NAME}_${MODEL_NAME} ${SRUN_ARGS}\
     python -u $pyroot/tools/train.py $pyroot/algolib/configs/$folder_model/$file_model.py --launcher=slurm  \
