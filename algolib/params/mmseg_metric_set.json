@@ -58,5 +58,29 @@
             0.01,
             0.6
         ]
+    },
+    "deeplabv3_r50-d8_512x1024_40k_cityscapes": {
+        "rate": [
+            0.01,
+            0.6
+        ]
+    },
+    "deeplabv3plus_r50-d8_512x1024_40k_cityscapes.": {
+        "rate": [
+            0.01,
+            0.6
+        ]
+    },
+    "fcn_r50-d8_512x1024_40k_cityscapes": {
+        "rate": [
+            0.01,
+            0.6
+        ]
+    },
+    "deeplabv3_unet_s5-d16_64x64_40k_drive": {
+        "rate": [
+            0.01,
+            0.6
+        ]
     }
 }
