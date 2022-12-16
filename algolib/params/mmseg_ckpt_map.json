@@ -39,15 +39,15 @@
         "path": "/mnt/lustre/share_data/PAT/datasets/mmseg/checkpoint/deeplabv3plus_r101-d8_512x512_160k_ade20k/iter_160000.pth"
     },
     "deeplabv3_r50-d8_512x1024_40k_cityscapes": {
-        "path": "/mnt/lustre/share_data/sunxiaoye/one_iter/ckpt/deeplabv3_r50-d8_512x1024_40k_cityscapes_20200605_022449-acadc2f8.pth"
+        "path": "/mnt/lustre/share_data/PAT/one_iter_run_data/ckpt/deeplabv3_r50-d8_512x1024_40k_cityscapes_20200605_022449-acadc2f8.pth"
     },
     "deeplabv3plus_r50-d8_512x1024_40k_cityscapes": {
-        "path": "/mnt/lustre/share_data/sunxiaoye/one_iter/ckpt/deeplabv3plus_r50-d8_512x1024_40k_cityscapes_20200605_094610-d222ffcd.pth"
+        "path": "/mnt/lustre/share_data/PAT/one_iter_run_data/ckpt/deeplabv3plus_r50-d8_512x1024_40k_cityscapes_20200605_094610-d222ffcd.pth"
     },
     "fcn_r50-d8_512x1024_40k_cityscapes": {
-        "path": "/mnt/lustre/share_data/sunxiaoye/one_iter/ckpt/fcn_r50-d8_512x1024_40k_cityscapes_20200604_192608-efe53f0d.pth"
+        "path": "/mnt/lustre/share_data/PAT/one_iter_run_data/ckpt/fcn_r50-d8_512x1024_40k_cityscapes_20200604_192608-efe53f0d.pth"
     },
     "deeplabv3_unet_s5-d16_64x64_40k_drive": {
-        "path": "/mnt/lustre/share_data/sunxiaoye/one_iter/ckpt/deeplabv3_unet_s5-d16_64x64_40k_drive_20201226_094047-0671ff20.pth"
+        "path": "/mnt/lustre/share_data/PAT/one_iter_run_data/ckpt/deeplabv3_unet_s5-d16_64x64_40k_drive_20201226_094047-0671ff20.pth"
     }
 }
