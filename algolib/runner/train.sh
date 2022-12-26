@@ -91,6 +91,10 @@ case $MODEL_NAME in
     "dmnet_r101-d8_512x512_160k_ade20k")
         FULL_MODEL="dmnet/dmnet_r101-d8_512x512_160k_ade20k"
         ;;
+    "upernet_r50_512x1024_40k_cityscapes")
+        FULL_MODEL="upernet/upernet_r50_512x1024_40k_cityscapes"
+        ;;
+
     # 注：以下三个模型存在相同的问题，详见：https://jira.sensetime.com/browse/PARROTSXQ-7694?filter=-2
     # "upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K")
     #     FULL_MODEL="swin/upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K"
