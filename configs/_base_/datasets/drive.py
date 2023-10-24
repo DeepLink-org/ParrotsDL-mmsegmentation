@@ -1,4 +1,10 @@
 # dataset settings
+file_client_args = dict(
+    backend='petrel',
+    path_mapping=dict({
+        'data/DRIVE/': 'SZ20:s3://00dataset/mmseg/DRIVE/',
+    }))
+
 dataset_type = 'DRIVEDataset'
 data_root = 'data/DRIVE'
 img_norm_cfg = dict(
@@ -6,7 +12,7 @@ img_norm_cfg = dict(
 img_scale = (584, 565)
 crop_size = (64, 64)
 train_pipeline = [
-    dict(type='LoadImageFromFile'),
+    dict(type='LoadImageFromFile', file_client_args=file_client_args),
     dict(type='LoadAnnotations'),
     dict(type='Resize', img_scale=img_scale, ratio_range=(0.5, 2.0)),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
@@ -18,7 +24,7 @@ train_pipeline = [
     dict(type='Collect', keys=['img', 'gt_semantic_seg'])
 ]
 test_pipeline = [
-    dict(type='LoadImageFromFile'),
+    dict(type='LoadImageFromFile', file_client_args=file_client_args),
     dict(
         type='MultiScaleFlipAug',
         img_scale=img_scale,
